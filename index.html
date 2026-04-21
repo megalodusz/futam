@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>QR Futam - Pályaválasztó</title>
+    <title>Tájfutás - Pályaválasztó</title>
     <script src="https://unpkg.com/html5-qrcode"></script>
     <style>
         :root { --primary: #00ff88; --bg: #121212; --surface: #1e1e1e; --text: #ffffff; --accent: #292929; --error: #ff4444; --success: #44ff44; }
@@ -41,7 +41,7 @@
 </head>
 <body>
 <div class="app-container">
-    <header><h1>QR Futam</h1></header>
+    <header><h1>Tájfutás</h1></header>
     
     <div class="timer-section">
         <div id="stopper-kijelzo">00:00.0</div>
@@ -211,7 +211,7 @@
         saveBtn.addEventListener('click', () => {
             const nev = prompt("Neved:", "Versenyző");
             if (!nev) return;
-            const tartalom = `--- QR FUTAM ---\nNév: ${nev}\nIdő: ${kijelzo.textContent}\nPontok: ${sorrend.join(',')}`;
+            const tartalom = `--- Tájfutás ---\nNév: ${nev}\nIdő: ${kijelzo.textContent}\nPontok: ${sorrend.join(',')}`;
             const blob = new Blob([tartalom], { type: 'text/plain' });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
